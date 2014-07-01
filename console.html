@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="http://supermobile.dk/html5/WebApp.Bynavn/styles/fluid.css">
+</head>
+<body>
+
+	<h1>
+		<a href="https://developer.chrome.com/devtools/docs/console">Using the Console</a>
+	</h1>
+	<section>
+		The JavaScript Console provides two primary functions for developers testing web pages and applications:
+
+A place to log diagnostic information using methods provided by the Console API, such as console.log(), or console.profile().
+<br>
+
+	</section>
+
+
+	<script>
+		var progress = function(test){
+			console.time("performance")
+				var array= new Array(1000000 * test)
+				for (var i = array.length - 1; i >= 0; i--) {
+					array[i] = new Object()
+				}
+			console.timeEnd("performance")
+		}
+
+		console.log("%c User authentication Flow> ", "color: blue; font-size: x-large")
+
+	</script>
+
+	<script>
+		var user = "userDemo", authenticated = true;
+		console.group("Authentication phase");
+			console.log("Authenticating user '%s'", user);
+
+			if (authenticated) {
+					console.log("User '%s' %c is connecting.", user, "color:green")
+				}
+			progress(1)
+		console.groupEnd();
+
+
+		var profile = "WebService authentication", connect = false;
+		console.group("WebService Connection phase");
+			console.log("WebService authentication process '%s'", profile);
+			if (!connect) {
+					console.log("WebService '%s' %c on progress", profile,"color:blue")
+				}
+			progress(2)
+		console.groupEnd();
+
+
+
+		var profile = "database authentication", connect = false;
+		console.group("Database Connection phase");
+			console.log("Database authentication process '%s'", profile);
+			if (!connect) {
+					console.log("Database '%s' %c waiting for validation",profile,"color:red")
+				}
+			progress(3)
+		console.groupEnd();
+
+
+	</script>
+
+
+</body>
+</html>

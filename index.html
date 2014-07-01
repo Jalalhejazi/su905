@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="http://supermobile.dk/html5/WebApp.Bynavn/styles/fluid.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="http://supermobile.dk/html5/WebApp.Bynavn/styles/fluid.css">
 </head>
 <body>
-	<h1>SU905 hello demo</h1>
+
+
+<div class='header'><h1>Directory</h1></div>
+<div class='search-view'>
+    <input class='search-key' type="search" placeholder="Enter name"/>
+    <ul class='list employee-list'></ul>
+</div>
+
+<script src="lib/jquery.js"></script>
+<script src="js/adapters/memory-adapter.js"></script>
+<!--
+	<script src="js/adapters/memory-adapter.js"></script>
+	<script src="js/adapters/localstorage-adapter.js"></script>
+	<script src="js/adapters/websql-adapter.js"></script>
+	<script src="js/adapters/jsonp-adapter.js"></script>
+-->
+
+<script src="js/app.js"></script>
 
 </body>
 </html>
